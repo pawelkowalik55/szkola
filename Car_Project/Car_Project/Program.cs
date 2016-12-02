@@ -14,7 +14,7 @@ namespace Car_Project
             spala.trasa = 120;
             spala.czas = 1.5;
             spala.sredniapredkosc(spala.trasa, spala.czas);
-            Console.WriteLine("{0}",CzasPracy.TodayTime.TimeOfDay);
+            Console.WriteLine(CzasPracy.TodayTime.TimeOfDay);
             
 
 
