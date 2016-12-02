@@ -8,7 +8,9 @@ namespace Car_Project
 {
     class CzasPracy
     {
-        public static DateTime TodayTime { get; }
-        public DateTime CzasPracySilnika = TodayTime;
+        public static DateTime TodayTime = DateTime.Now;
+
+        
+        //public DateTime CzasPracySilnika = TodayTime;
     }
 }
