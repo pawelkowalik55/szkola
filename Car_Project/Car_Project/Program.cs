@@ -10,6 +10,12 @@ namespace Car_Project
     {
         static void Main(string[] args)
         {
+            SredniaPredkosc spala = new SredniaPredkosc();
+            spala.trasa = 120;
+            spala.czas = 1.5;
+            spala.sredniapredkosc(spala.trasa, spala.czas);
+
+
         }
     }
 }
