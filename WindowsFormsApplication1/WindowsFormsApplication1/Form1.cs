@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -28,10 +29,7 @@ namespace WindowsFormsApplication1
 
        
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            
-        }
+        
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -43,6 +41,8 @@ namespace WindowsFormsApplication1
         private void spd_up_Click(object sender, EventArgs e)
         {
             speed++;
+            if (speed == 251)
+                speed--;
             if (speed > 0)
                 gear = 1;
             if (speed > 20)
@@ -83,21 +83,31 @@ namespace WindowsFormsApplication1
 
         private void distance_TextChanged(object sender, EventArgs e)
         {
+           
+        }
+
+       
+
+        private void tbgear_TextChanged(object sender, EventArgs e)
+        {
             double i = 0;
             do
             {
                 i += 0.1;
-            } while (i==800);
+                distance.Text = Convert.ToString(i);
+                
+            } while (i < 800);
         }
 
-        private void refresh_Click(object sender, EventArgs e)
+        private long czas = 0;
+        private void start_Click(object sender, EventArgs e)
         {
-
-            distance.Text = Convert.ToString(TimeSpan.TicksPerMinute);
-
+            timer1.Enabled = true;
+            timer1.Start();
+            czas = Convert.ToInt64(timer1);
         }
 
-        private void tbgear_TextChanged(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
 
         }
