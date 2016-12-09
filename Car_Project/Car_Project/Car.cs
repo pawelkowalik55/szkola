@@ -11,19 +11,21 @@ namespace Car_Project
         public string Marka;
         public string Model;
         public double PojemnoscSilnika;
-        public int PojemnoscBaku;
+        public int PredkoscMax;
+        
 
-        public Car(string marka, string model, int pojemnoscbaku, double pojemnodcsilnika )
+        public Car(string marka, string model, double pojemnodcsilnika, int predkoscmax )
         {
             Marka = marka;
             Model = model;
             PojemnoscSilnika = pojemnodcsilnika;
-            PojemnoscBaku = pojemnoscbaku;
+            PredkoscMax = predkoscmax;
+
         }
 
         public void wyswietl()
         {
-            Console.WriteLine("Marka: {0}\nModel: {1}\nPojemnosc Silnika: {2}\nPojemnosc Baku: {3}",Marka,Model,PojemnoscSilnika,PojemnoscBaku);
+            Console.WriteLine("Marka: {0}\nModel: {1}\nPojemnosc Silnika: {2}\n",Marka,Model,PojemnoscSilnika);
         }
     }
 

@@ -13,16 +13,16 @@ namespace Car_Project
         public DateTime czasstop;
         public double czas;
 
-        public void sredniapredkosc(int trasa, DateTime czas)
+        public void sredniapredkosc(int trasa, double czas)
         {
             
-            Console.WriteLine("Średnia predkosc = {0}", trasa / Convert.ToDouble(czas));
+            Console.WriteLine("Średnia predkosc: {0}", trasa / (czas/60.0));
         }
 
-        public void predkosctymczasowa(DateTime czas)
+        public void predkosctymczasowa(double czas)
         {
             
-            Console.WriteLine("Spalanie chwilowe = {0}",1/ Convert.ToDouble(czas));
+            Console.WriteLine("Spalanie chwilowe = {0}",1/ czas);
         }
     }
 }
