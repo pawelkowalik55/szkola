@@ -41,7 +41,7 @@
             this.tbgear = new System.Windows.Forms.TextBox();
             this.start = new System.Windows.Forms.Button();
             this.Czas = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbtime = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -158,7 +158,7 @@
             // 
             // Czas
             // 
-            this.Czas.Controls.Add(this.textBox1);
+            this.Czas.Controls.Add(this.tbtime);
             this.Czas.Location = new System.Drawing.Point(13, 178);
             this.Czas.Name = "Czas";
             this.Czas.Size = new System.Drawing.Size(176, 70);
@@ -166,15 +166,16 @@
             this.Czas.TabStop = false;
             this.Czas.Text = "Czas";
             // 
-            // textBox1
+            // tbtime
             // 
-            this.textBox1.Location = new System.Drawing.Point(5, 16);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.tbtime.Location = new System.Drawing.Point(5, 16);
+            this.tbtime.Name = "tbtime";
+            this.tbtime.Size = new System.Drawing.Size(100, 20);
+            this.tbtime.TabIndex = 0;
             // 
             // timer1
             // 
+            this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
@@ -217,7 +218,7 @@
         private System.Windows.Forms.TextBox tbgear;
         private System.Windows.Forms.Button start;
         private System.Windows.Forms.GroupBox Czas;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbtime;
         private System.Windows.Forms.Timer timer1;
     }
 }

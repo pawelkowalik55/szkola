@@ -15,7 +15,7 @@ namespace WindowsFormsApplication1
     {
         static Random r = new Random(5);
         public int speed = r.Next(0, 200);
-        Czas time = new Czas();
+        private double czas = 0;
         
         
      
@@ -81,9 +81,11 @@ namespace WindowsFormsApplication1
             tbgear.Text = Convert.ToString(gear);
         }
 
+        private double dystans = 0;
         private void distance_TextChanged(object sender, EventArgs e)
         {
-           
+            
+            
         }
 
        
@@ -99,17 +101,20 @@ namespace WindowsFormsApplication1
             } while (i < 800);
         }
 
-        private long czas = 0;
+        
         private void start_Click(object sender, EventArgs e)
         {
             timer1.Enabled = true;
             timer1.Start();
-            czas = Convert.ToInt64(timer1);
+            
         }
 
+        private string tmp;
         private void timer1_Tick(object sender, EventArgs e)
         {
-
+            czas+=1;
+            
+            tbtime.Text = czas.ToString();
         }
     }
 }
