@@ -11,6 +11,6 @@ namespace Car_Project
         public static DateTime TodayTime = DateTime.Now;
 
         
-        //public DateTime CzasPracySilnika = TodayTime;
+        
     }
 }

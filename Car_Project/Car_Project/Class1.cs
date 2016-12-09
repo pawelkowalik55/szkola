@@ -19,10 +19,6 @@ namespace Car_Project
             Console.WriteLine("Średnia predkosc: {0}", trasa / (czas/60.0));
         }
 
-        public void predkosctymczasowa(double czas)
-        {
-            
-            Console.WriteLine("Spalanie chwilowe = {0}",1/ czas);
-        }
+       
     }
 }

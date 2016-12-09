@@ -19,7 +19,7 @@ namespace Car_Project
             Console.Write("podaj czas w którym pokonałeś dystans w min: ");
             int time = Convert.ToInt32(Console.ReadLine());
             TimeSpan czas = TimeSpan.FromMinutes(time);
-            Console.WriteLine("czas jazdy to {0}",czas);
+            Console.WriteLine("czas jazdy to {0}",Convert.ToString(czas));
             
             //Thread.Sleep(Convert.ToInt32(Console.ReadLine())*1000);
             spala.czasstop = DateTime.Now;

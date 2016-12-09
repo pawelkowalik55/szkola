@@ -14,8 +14,11 @@ namespace WindowsFormsApplication1
     {
         static Random r = new Random(5);
         public int speed = r.Next(0, 200);
+        Czas time = new Czas();
+        
+        
      
-        private int trasa = 0;
+        
         private int gear = 1;
         
         public Form1()
@@ -27,7 +30,7 @@ namespace WindowsFormsApplication1
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            textBox1.Text = Convert.ToString(TimeSpan.FromSeconds(1));
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -35,10 +38,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-             
-        }
+       
 
         private void spd_up_Click(object sender, EventArgs e)
         {
@@ -56,6 +56,7 @@ namespace WindowsFormsApplication1
             if (speed > 100)
                 gear = 6;
             spd.Text = Convert.ToString(speed);
+            tbgear.Text = Convert.ToString(gear);
         }
 
         private void spd_down_Click(object sender, EventArgs e)
@@ -76,17 +77,29 @@ namespace WindowsFormsApplication1
             if (speed > 100)
                 gear = 6;
             spd.Text = Convert.ToString(speed);
+            Update();
+            tbgear.Text = Convert.ToString(gear);
         }
 
         private void distance_TextChanged(object sender, EventArgs e)
         {
-            
+            double i = 0;
+            do
+            {
+                i += 0.1;
+            } while (i==800);
         }
 
         private void refresh_Click(object sender, EventArgs e)
         {
-            distance.Text = Convert.ToString(gear);
-            
+
+            distance.Text = Convert.ToString(TimeSpan.TicksPerMinute);
+
+        }
+
+        private void tbgear_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
