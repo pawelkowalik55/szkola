@@ -85,20 +85,13 @@ namespace WindowsFormsApplication1
         private void distance_TextChanged(object sender, EventArgs e)
         {
             
-            
         }
 
        
 
         private void tbgear_TextChanged(object sender, EventArgs e)
         {
-            double i = 0;
-            do
-            {
-                i += 0.1;
-                distance.Text = Convert.ToString(i);
-                
-            } while (i < 800);
+            
         }
 
         
@@ -115,6 +108,8 @@ namespace WindowsFormsApplication1
             czas+=1;
             
             tbtime.Text = czas.ToString();
+            dystans = (czas / 3600) * speed;
+            distance.Text = dystans.ToString();
         }
     }
 }
