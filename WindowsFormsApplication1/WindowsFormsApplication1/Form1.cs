@@ -14,6 +14,10 @@ namespace WindowsFormsApplication1
     {
         static Random r = new Random(5);
         public int speed = r.Next(0, 200);
+     
+        private int trasa = 0;
+        private int gear = 1;
+        
         public Form1()
         {
             InitializeComponent();
@@ -39,13 +43,50 @@ namespace WindowsFormsApplication1
         private void spd_up_Click(object sender, EventArgs e)
         {
             speed++;
+            if (speed > 0)
+                gear = 1;
+            if (speed > 20)
+                gear = 2;
+            if (speed > 40)
+                gear = 3;
+            if (speed > 60)
+                gear = 4;
+            if (speed > 80)
+                gear = 5;
+            if (speed > 100)
+                gear = 6;
             spd.Text = Convert.ToString(speed);
         }
 
         private void spd_down_Click(object sender, EventArgs e)
         {
             speed--;
+            if (speed == -1)
+                speed++;
+            if (speed > 0)
+                gear = 1;
+            if (speed > 20)
+                gear = 2;
+            if (speed > 40)
+                gear = 3;
+            if (speed > 60)
+                gear = 4;
+            if (speed > 80)
+                gear = 5;
+            if (speed > 100)
+                gear = 6;
             spd.Text = Convert.ToString(speed);
+        }
+
+        private void distance_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void refresh_Click(object sender, EventArgs e)
+        {
+            distance.Text = Convert.ToString(gear);
+            
         }
     }
 }
