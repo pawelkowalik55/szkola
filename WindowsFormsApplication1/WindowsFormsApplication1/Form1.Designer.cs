@@ -43,7 +43,6 @@
             this.Czas = new System.Windows.Forms.GroupBox();
             this.tbtime = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -181,11 +180,6 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // timer2
-            // 
-            this.timer2.Interval = 1000;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -228,7 +222,6 @@
         private System.Windows.Forms.GroupBox Czas;
         private System.Windows.Forms.TextBox tbtime;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Timer timer2;
     }
 }
 

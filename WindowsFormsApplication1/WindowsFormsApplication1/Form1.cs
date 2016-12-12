@@ -16,7 +16,6 @@ namespace WindowsFormsApplication1
         private static readonly Random r = new Random(7);
         public int speed = r.Next(0, 200);
         private float czas;
-        private float czas2;
 
 
         private int gear = 1;
@@ -92,8 +91,7 @@ namespace WindowsFormsApplication1
         {
             timer1.Enabled = true;
             timer1.Start();
-            timer2.Enabled = true;
-            timer2.Start();
+
 
             spd.Text = Convert.ToString(speed);
             spd.Text = Convert.ToString(gear);
@@ -119,25 +117,16 @@ namespace WindowsFormsApplication1
         private void timer1_Tick(object sender, EventArgs e)
         {
             czas += 1;
-            czas2++;
+            
             tbtime.Text = czas.ToString();
-            dystans += czas2 * speed/3600;
+            dystans += czas * speed/3600;
             distance.Text = dystans.ToString();
         }
 
-        private float dystans2;
+        
         
 
-        private void timer2_Tick(object sender, EventArgs e)
-        {
-            
-
-            
-            dystans2 += dystans;
-            //dystans = (czas / 3600) * speed;
-            //dystans2 = dystans;
-            
-        }
+    
 
         private void spd_TextChanged(object sender, EventArgs e)
         {
