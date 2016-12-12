@@ -56,7 +56,7 @@ namespace WindowsFormsApplication1
         private void spd_down_Click(object sender, EventArgs e)
         {
             speed--;
-            if (speed == 0)
+            if (speed == -1)
                 speed++;
             if (speed > 0)
                 gear = 1;
@@ -97,7 +97,7 @@ namespace WindowsFormsApplication1
 
             spd.Text = Convert.ToString(speed);
             spd.Text = Convert.ToString(gear);
-            if (speed == 0)
+            if (speed == -1)
                 speed++;
             if (speed > 0)
                 gear = 1;
@@ -121,7 +121,7 @@ namespace WindowsFormsApplication1
             czas += 1;
             czas2++;
             tbtime.Text = czas.ToString();
-            dystans =+  speed;
+            dystans += czas2 * speed/3600;
             distance.Text = dystans.ToString();
         }
 
