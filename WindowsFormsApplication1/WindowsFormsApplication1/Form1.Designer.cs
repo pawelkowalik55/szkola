@@ -44,7 +44,6 @@
             this.tbtime = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -78,6 +77,7 @@
             this.spd.ReadOnly = true;
             this.spd.Size = new System.Drawing.Size(100, 20);
             this.spd.TabIndex = 2;
+            this.spd.TextChanged += new System.EventHandler(this.spd_TextChanged);
             // 
             // groupBox1
             // 
@@ -172,6 +172,7 @@
             // 
             this.tbtime.Location = new System.Drawing.Point(5, 16);
             this.tbtime.Name = "tbtime";
+            this.tbtime.ReadOnly = true;
             this.tbtime.Size = new System.Drawing.Size(100, 20);
             this.tbtime.TabIndex = 0;
             // 
@@ -185,20 +186,11 @@
             this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // webBrowser1
-            // 
-            this.webBrowser1.Location = new System.Drawing.Point(392, 12);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(250, 250);
-            this.webBrowser1.TabIndex = 11;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(709, 338);
-            this.Controls.Add(this.webBrowser1);
+            this.ClientSize = new System.Drawing.Size(356, 338);
             this.Controls.Add(this.Czas);
             this.Controls.Add(this.start);
             this.Controls.Add(this.groupBox3);
@@ -237,7 +229,6 @@
         private System.Windows.Forms.TextBox tbtime;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.WebBrowser webBrowser1;
     }
 }
 
